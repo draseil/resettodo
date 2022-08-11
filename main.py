@@ -13,7 +13,8 @@ def create():
 		if not todo_list:
 			flash('please fill out the todo list')
 		else:
-			messages.append({'title': 'Message', 'content': todo_list})
+			for line in todo_list.splitlines():
+				messages.append({'content': line})
 			return redirect(url_for('main'))
 	
 	return render_template('index.html')
