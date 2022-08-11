@@ -2,12 +2,26 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
 	<title>Resetting TODO Widget</title>
 </head>
 <body>
-	<form method="get">
-		<textarea name="todo-list" id="todo-list" rows="10" cols="80" autofocus placeholder="Type in your daily TODO list here.  Newlines indicate new bullet points."></textarea><br/>
-		<input type="submit" value="generate widget">
-	</form>
+	<div id="header">
+		<h1>Resetting TODO Widget for Notion</h1>
+	</div>
+	<div id="description">
+		<p>
+			This is a tool that creates a TODO list widget that clears all the checkboxes at midnight every night.  This is like a habit tracker, but simpler.  This is useful for daily tasks that don't need tracking.
+		</p>
+		<p>
+			Type in your TODO list separated by newlines, and then click on the "Generate Widget" button to create your widget.  Once taken to the new page, copy the URL and embed that into your Notion page.
+		</p>
+	</div>
+	<div id="textbox">
+		<form method="get">
+			<textarea name="todo-list" id="todo-list" rows="10" cols="80" autofocus placeholder="Type in your daily TODO list here.  Newlines indicate new bullet points."></textarea><br/>
+			<input type="submit" value="Generate Widget">
+		</form>
+	</div>
 </body>
 </html>

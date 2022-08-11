@@ -1,5 +1,31 @@
-#checkboxes {
+body {
 	line-height: 1.5;
-	color: white;
 	font-family: sans-serif;
+}
+
+#header {
+	background-color: #4e73db;
+	box-shadow: 0 10px 25px 0px gray;
+	top: 0;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	height: 100px;
+}
+
+#description {
+	position: absolute;
+	top: 150px;
+	width: 30%;
+}
+
+#textbox {
+	position: absolute;
+	left: 40%;
+	top: 150px;
+}
+
+#checkboxes {
+	color: white;
 }
