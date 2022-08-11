@@ -14,11 +14,11 @@ def create():
 			flash('please fill out the todo list')
 		else:
 			for line in todo_list.splitlines():
-				messages.append({'content': line})
+				messages.append(line)
 			return redirect(url_for('main'))
 	
 	return render_template('index.html')
 
 @app.route('/generated', methods=('GET', 'POST'))
 def main():
-	return render_template('generated.html', messages=messages)
+	return render_template('generated.html', len = len(messages), messages = messages)

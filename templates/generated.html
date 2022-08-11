@@ -5,10 +5,33 @@
 	<title>Resetting TODO Widget</title>
 </head>
 <body>
-	{% for message in messages %}
-		<div class='message'>
-			<p>{{ message['content'] }}</p>
-		</div>
-	{% endfor %}
+	<div class='message'>
+		<form action="#">
+			{% for i in range(0, len) %}
+				<input id="item{{ [i] }}" type="checkbox">
+				<label for="item{{ [i] }}">{{ messages[i] }}</label><br/>
+			{% endfor %}
+			<button onclick="resetBoxes()">clear</button>
+		</form>
+	</div>
+
+	<script>
+		var items = document.getElementsByTagName("INPUT");
+		var midnight = "00:00:00";
+		var now = null;
+
+		function resetBoxes() {
+			for (var i = 0; i < items.length; i++) {
+				items[i].checked = false;
+			}
+		}
+
+		setInterval(function () {
+			now = moment().format("HH:mm:ss");
+			if (now === midnight) {
+				resetBoxes();
+			}
+		}, 1000);
+	</script>
 </body>
 </html>
