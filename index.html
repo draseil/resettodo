@@ -1,42 +1,10 @@
-<script src="https://momentjs.com/downloads/moment.min.js"></script>
-
-<div id="todo" style="font-family: sans-serif; line-height: 1.5; color: white;">
-	<form action="#">
-		<input id="item1" type="checkbox">
-		<label for="item1">take aripiprazol</label><br/>
-		<input id="item2" type="checkbox">
-		<label for="item2">take flutiform</label><br/>
-		<input id="item3" type="checkbox">
-		<label for="item3">brush teeth</label><br/>
-		<input id="item4" type="checkbox">
-		<label for="item4">eat breakfast</label><br/>
-		<input id="item5" type="checkbox">
-		<label for="item5">eat lunch</label><br/>
-		<input id="item6" type="checkbox">
-		<label for="item6">eat dinner</label><br/>
-		<input id="item7" type="checkbox">
-		<label for="item7">take flutiform</label><br/>
-		<input id="item8" type="checkbox">
-		<label for="item8">brush teeth</label><br/>
-		<button onclick="resetBoxes()">clear</button>
-	</form>
-</div>
-
-<script>
-var items = document.getElementsByTagName("INPUT");
-var midnight = "00:00:00";
-var now = null;
-
-function resetBoxes() {
-	for (var i = 0; i < items.length; i++) {
-		items[i].checked = false;
-	}
-}
-
-setInterval(function () {
-	now = moment().format("HH:mm:ss");
-	if (now === midnight) {
-		resetBoxes();
-	}
-}, 1000);
-</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title>Resetting TODO Widget</title>
+</head>
+<body>
+        
+</body>
+</html>
