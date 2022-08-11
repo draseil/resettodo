@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='style.css') }}">
 	<title>Resetting TODO Widget</title>
 </head>
 <body>
-	<div class='message'>
+	<div id='message'>
 		<form>
 			{% for i in range(0, len) %}
 				<input id="item{{ [i] }}" type="checkbox">
