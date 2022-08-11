@@ -9,6 +9,7 @@ checkboxes = []
 def create():
     if request.method == 'GET':
         todo_list = request.args.get('todo-list')
+        color = request.args.get('color')
 
         if not todo_list:
             flash('please fill out the todo list')
@@ -16,7 +17,7 @@ def create():
             checkboxes.clear();
             for line in todo_list.splitlines():
                 checkboxes.append(line)
-            return render_template('generated.html', len = len(checkboxes), checkboxes = checkboxes)
+            return render_template('generated.html', len = len(checkboxes), checkboxes = checkboxes, color = color)
     
     return render_template('index.html')
 

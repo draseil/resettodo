@@ -10,7 +10,7 @@
 		<form>
 			{% for i in range(0, len) %}
 				<input id="item{{ [i] }}" type="checkbox">
-				<label for="item{{ [i] }}">{{ checkboxes[i] }}</label><br/>
+				<label for="item{{ [i] }}" style="color: {{ color }};">{{ checkboxes[i] }}</label><br/>
 			{% endfor %}
 		</form>
 	</div>
